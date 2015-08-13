@@ -8,7 +8,8 @@ module.exports = function(grunt) {
 			dev: {
 				options: {
 					port: 8051,
-					host: 'http://localhost'
+					host: 'http://localhost',
+					bases: 'dist'
 				}
 			}
 		},
