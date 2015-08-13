@@ -18,6 +18,11 @@ module.exports = function(grunt) {
 				files: {
 					'dist/styles.css': 'dev/styles.less'
 				}
+			},
+			options: {
+				modifyVars: {
+					color: '#0ffff0'
+				}
 			}
 		},
 		copy: {
@@ -36,6 +41,13 @@ module.exports = function(grunt) {
 		watch: {
 			less: {
 				files: ['dev/*.less'],
+				tasks: ['less:dev'],
+				options: {
+					livereload: true,
+				}
+			},
+			gruntfile: {
+				files: ['Gruntfile.js'],
 				tasks: ['less:dev'],
 				options: {
 					livereload: true,
