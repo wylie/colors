@@ -1,5 +1,108 @@
+@import (less) 'reset.css';
 html,
 body {
-	background-color: #efefef;
+	box-sizing: border-box;
+
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 18px;
 	color: red;
+
+	background-color: #efefef;
+}
+
+body {
+	text-align: center;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+// TOP BUSINESS
+#top {
+	padding: 40px 0;
+
+	background-color: #fff;
+	h1 {
+		font-size: 30px;
+	}
+	input {
+		margin: 10px 0 0;
+	}
+}
+
+@color: #f00;
+
+#bottom {
+	ul {
+		position: relative;
+
+		height: 100vh;
+	}
+	li {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+
+		width: (100% / 11);
+		padding: 20px 0;
+
+		color: #fff;
+		&:nth-child(1) {
+			background-color: @color;
+		}
+		&:nth-child(2) {
+			left: (100% / 11);
+
+			background-color: darken(@color, 10%);
+		}
+		&:nth-child(3) {
+			left: (100% / 11) * 2;
+
+			background-color: darken(@color, 20%);
+		}
+		&:nth-child(4) {
+			left: (100% / 11) * 3;
+
+			background-color: darken(@color, 30%);
+		}
+		&:nth-child(5) {
+			left: (100% / 11) * 4;
+
+			background-color: darken(@color, 40%);
+		}
+		&:nth-child(6) {
+			left: (100% / 11) * 5;
+
+			background-color: darken(@color, 50%);
+		}
+		&:nth-child(7) {
+			left: (100% / 11) * 6;
+
+			background-color: darken(@color, 60%);
+		}
+		&:nth-child(8) {
+			left: (100% / 11) * 7;
+
+			background-color: darken(@color, 70%);
+		}
+		&:nth-child(9) {
+			left: (100% / 11) * 8;
+
+			background-color: darken(@color, 80%);
+		}
+		&:nth-child(10) {
+			left: (100% / 11) * 9;
+
+			background-color: darken(@color, 90%);
+		}
+		&:nth-child(11) {
+			left: (100% / 11) * 10;
+
+			background-color: darken(@color, 100%);
+		}
+	}
 }
