@@ -1,7 +1,6 @@
 window.onload = init;
 
 function init() {
-	console.log('SHAZAM');
 	var submit = document.getElementById('submit');
 	submit.onclick = getValue;
 }
