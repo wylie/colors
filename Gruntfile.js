@@ -26,17 +26,24 @@ module.exports = function(grunt) {
 					{
 						expand: true,
 						flatten: true,
-						src: ['dev/*.html', 'dev/*.js'],
+						src: ['dev/*.html','dev/*.js'],
 						dest: 'dist/',
 						filter: 'isFile'
 					}
 				]
-			}
+			},
 		},
 		watch: {
-			dev: {
-				files: ['*.less', 'Gruntfile.js'],
+			less: {
+				files: ['dev/*.less'],
 				tasks: ['less:dev'],
+				options: {
+					livereload: true,
+				}
+			},
+			others: {
+				files: ['dev/*.html','dev/*.js','Gruntfile.js'],
+				tasks: ['copy'],
 				options: {
 					livereload: true,
 				}
