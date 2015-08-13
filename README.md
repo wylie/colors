@@ -8,6 +8,6 @@ Build the site:
 
 `grunt build`
 
-Build the site, start a server and watch for changes:
+Build the site, start a server, watch for changes:
 
 `grunt server`
